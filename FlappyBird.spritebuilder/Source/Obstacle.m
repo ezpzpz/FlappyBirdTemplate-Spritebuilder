@@ -16,7 +16,7 @@
 #define ARC4RANDOM_MAX      0x100000000
 
 // visibility on a 3,5-inch iPhone ends a 88 points and we want some meat
-static const CGFloat minimumYPosition = 100.f;
+static const CGFloat minimumYPosition = 200.f;
 // visibility ends at 480 and we want some meat
 static const CGFloat maximumYPosition = 380.f;
 
@@ -32,7 +32,7 @@ static const CGFloat maximumYPosition = 380.f;
   // value between 0.f and 1.f
   CGFloat random = ((double)arc4random() / ARC4RANDOM_MAX);
   CGFloat range = maximumYPosition - minimumYPosition;
-  self.position = ccp(self.position.x, minimumYPosition + (random * range));
+  self.position = ccp(self.position.y, minimumYPosition + (random * range));
 }
 
 @end
